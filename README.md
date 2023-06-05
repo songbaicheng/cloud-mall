@@ -2,13 +2,13 @@
 ## Spring Cloud Alibaba依赖选用
  | 组件或框架 | 版本号 |
 |-------|--------|
-| Spring Cloud Alibaba | 2.2.10-RC1 |
-| Spring Cloud | Hoxton.SR12 |
-| Spring Boot | 2.3.12.RELEASE |
+| Spring Cloud Alibaba | 2022.0.0.0-RC2 |
+| Spring Cloud | 2022.0.0 |
+| Spring Boot | 3.0.2 |
 | Sentinel | 1.8.6 |
-| Nacos | 2.2.0 |
+| Nacos | 2.2.1 |
 | RocketMQ | 4.9.4 |
-| Seata | 1.6.1 |
+| Seata | 1.7.0-native-rc2 |
 
 ## 模块
 - mall-admin：商城管理台服务

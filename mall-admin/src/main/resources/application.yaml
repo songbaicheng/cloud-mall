@@ -1,0 +1,13 @@
+
+server:
+  port: 8080 # 应用服务 WEB 访问端口
+
+spring:
+  application:
+    name: mall-admin # 服务注册名称
+  cloud:
+    nacos:
+      config:
+        server-addr: localhost:8848 # 服务注册地址
+        username: nacos
+        password: nacos
