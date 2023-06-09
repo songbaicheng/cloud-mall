@@ -1,4 +1,4 @@
-package com.mall.malladmin;
+package com.mall.admin;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
