@@ -19,6 +19,7 @@
 
     <properties>
         <java.version>17</java.version>
+        <maven-compiler.verison>3.8.1</maven-compiler.verison>
         <spring-boot.version>3.0.2</spring-boot.version>
         <spring-cloud-alibaba.version>2022.0.0.0-RC2</spring-cloud-alibaba.version>
         <spring-cloud.version>2022.0.0</spring-cloud.version>
@@ -81,7 +82,7 @@
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-compiler-plugin</artifactId>
-                    <version>3.8.1</version>
+                    <version>${maven-compiler.verison}</version>
                     <configuration>
                         <source>11</source>
                         <target>11</target>
