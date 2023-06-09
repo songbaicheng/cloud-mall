@@ -1,4 +1,4 @@
-package com.sbc.malladmin;
+package com.mall.malladmin;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
