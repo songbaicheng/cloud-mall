@@ -4,9 +4,10 @@ spring:
     gateway:
       discovery:
         locator:
-          enabled: true
+          enabled: true # # 启用服务发现，开启动态路由
+          lower-case-service-id: true # 开启服务名称小写
       routes:
-        - id: mall-admin
-          uri: lb://mall-admin
-          predicates:
+        - id: mall-admin # mall-admin模块路由
+          uri: lb://mall-admin # 占位符
+          predicates: # 断言
             - Path=/mall-admin/**
