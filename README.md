@@ -10,5 +10,7 @@
 | RocketMQ | 4.9.4 |
 | Seata | 1.7.0-native-rc2 |
 
-## 模块
+## 服务模块
+- mall-dependency：项目版本统一管理模块
 - mall-admin：商城管理台服务
+- mall-gateway：商城网关模块

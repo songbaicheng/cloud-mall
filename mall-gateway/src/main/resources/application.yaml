@@ -1,0 +1,12 @@
+# 配置到Nacos配置中心区
+spring:
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+      routes:
+        - id: mall-admin
+          uri: lb://mall-admin
+          predicates:
+            - Path=/mall-admin/**
