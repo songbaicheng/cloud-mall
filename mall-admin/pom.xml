@@ -12,6 +12,7 @@
 
     <artifactId>mall-admin</artifactId>
     <version>1.0.0</version>
+    <packaging>jar</packaging>
 
     <name>mall-admin</name>
     <description>商城管理台服务</description>
@@ -32,6 +33,14 @@
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-bootstrap</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.baomidou</groupId>
+            <artifactId>mybatis-plus-boot-starter</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
         </dependency>
     </dependencies>
 

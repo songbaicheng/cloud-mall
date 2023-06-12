@@ -16,6 +16,7 @@
     <modules>
         <module>../mall-admin</module>
         <module>../mall-gateway</module>
+        <module>../mall-common</module>
     </modules>
 
     <properties>
@@ -24,7 +25,9 @@
         <spring-boot.version>3.0.2</spring-boot.version>
         <spring-cloud-alibaba.version>2022.0.0.0-RC2</spring-cloud-alibaba.version>
         <spring-cloud.version>2022.0.0</spring-cloud.version>
-        <spring-cloud-bootstrap>4.0.1</spring-cloud-bootstrap>
+        <spring-cloud-bootstrap.version>4.0.1</spring-cloud-bootstrap.version>
+        <mybatis-plus.version>3.5.3.1</mybatis-plus.version>
+        <mysql.version>8.0.28</mysql.version>
     </properties>
 
     <dependencies>
@@ -61,7 +64,7 @@
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-starter-bootstrap</artifactId>
-                <version>${spring-cloud-bootstrap}</version>
+                <version>${spring-cloud-bootstrap.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.springframework.boot</groupId>
@@ -73,6 +76,22 @@
                         <artifactId>junit-vintage-engine</artifactId>
                     </exclusion>
                 </exclusions>
+            </dependency>
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-boot-starter</artifactId>
+                <version>${mybatis-plus.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>mysql</groupId>
+                <artifactId>mysql-connector-java</artifactId>
+                <version>${mysql.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.github.davidfantasy</groupId>
+                <artifactId>mybatis-plus-generator-ui</artifactId>
+                <version>2.0.1</version>
+                <scope>test</scope>
             </dependency>
         </dependencies>
     </dependencyManagement>
