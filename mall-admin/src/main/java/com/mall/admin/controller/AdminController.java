@@ -21,6 +21,11 @@ public class AdminController {
 
     private final IAdminService iAdminService;
 
+    @GetMapping("/test")
+    public String test() {
+        return "test";
+    }
+
     @GetMapping(value = "/{id}")
     public ResponseEntity<Admin> getById(@PathVariable("id") String id) {
 
@@ -30,4 +35,5 @@ public class AdminController {
 
         return new ResponseEntity<>(iAdminService.getById(id), HttpStatus.OK);
     }
+
 }

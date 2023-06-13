@@ -10,7 +10,7 @@ mybatis-plus:
   type-aliases-package: com/mall/admin/entity # 实体类包路径
   configuration:
     map-underscore-to-camel-case: true # 驼峰转下划线
-    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl # 控制台sql展示
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl # 控制台打印sql
   global-config:
     banner: false # 关闭mybatis-plus启动logo
     db-config:
