@@ -4,6 +4,10 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver # mysql驱动
     username: root # 账户
     password: songbaicheng # 密码
+  boot:
+    admin:
+      client:
+        url: http://localhost:8110/ # spring boot admin server 地址
 
 mybatis-plus:
   mapper-locations: classpath:mapper/*.xml # mapper映射文件位置
@@ -17,3 +21,9 @@ mybatis-plus:
       logic-delete-field: deleted # 逻辑删除字段
       logic-delete-value: 1 # 删除状态
       logic-not-delete-value: 0 # 未删除状态
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*' # 暴露给监控全部接口

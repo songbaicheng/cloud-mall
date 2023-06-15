@@ -1,0 +1,6 @@
+# 配置到Nacos配置中心区
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
