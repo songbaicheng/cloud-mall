@@ -1,0 +1,12 @@
+# 配置到Nacos配置中心区
+spring:
+  boot:
+    admin:
+      client:
+        url: http://localhost:8110/ # spring boot admin server 地址
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*' # 暴露给监控全部接口
