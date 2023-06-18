@@ -4,6 +4,12 @@ spring:
     admin:
       client:
         url: http://localhost:8110/ # spring boot admin server 地址
+  security:
+    user:
+      name: songbaicheng # 默认用户名
+      password: songbaicheng # 默认用户密码
+      roles: # 默认用户身份
+        - admin
 
 management:
   endpoints:
