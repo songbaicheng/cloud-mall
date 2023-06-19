@@ -28,9 +28,11 @@ public class IgnoreUrlsRemoveJwtFilter implements WebFilter {
 
         @Override
         public Mono<Void> filter(ServerWebExchange exchange, WebFilterChain chain) {
+
             ServerHttpRequest request = exchange.getRequest();
             URI uri = request.getURI();
             PathMatcher pathMatcher = new AntPathMatcher();
+
             //白名单路径移除JWT请求头
             List<String> ignoreUrls = ignoreUrlsConfig.getUrls();
             for (String ignoreUrl : ignoreUrls) {
@@ -40,6 +42,7 @@ public class IgnoreUrlsRemoveJwtFilter implements WebFilter {
                     return chain.filter(exchange);
                 }
             }
+
             return chain.filter(exchange);
         }
 }
