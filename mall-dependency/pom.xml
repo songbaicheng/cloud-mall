@@ -139,6 +139,11 @@
                 <artifactId>spring-security-jwt</artifactId>
                 <version>${spring-security-jwt.version}</version>
             </dependency>
+            <dependency>
+                <groupId>com.nimbusds</groupId>
+                <artifactId>nimbus-jose-jwt</artifactId>
+                <version>9.30.2</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 

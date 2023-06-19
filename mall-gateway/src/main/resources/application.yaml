@@ -21,3 +21,17 @@ management:
     web:
       exposure:
         include: '*' # 暴露给监控全部接口
+
+secure:
+  ignore:
+    urls: #配置白名单路径
+      - "/*/*.js"
+      - "/*/*.css"
+      - "/*/*.png"
+      - "/*/*.ico"
+      - "/webjars/**"
+      - "/actuator/**"
+      - "/mall-auth/oauth/token" # 获取token
+      - "/mall-auth/rsa/publicKey" # 获取认证公钥
+      - "/mall-admin/admin/login" # 后台登录
+      - "/mall-admin/admin/register" # 后台注册

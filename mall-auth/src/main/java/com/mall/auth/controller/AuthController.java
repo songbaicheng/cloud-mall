@@ -9,6 +9,6 @@ import org.springframework.web.bind.annotation.RestController;
  * @date 2023/6/17 11:34
  */
 @RestController
-@RequestMapping("/auth")
+@RequestMapping("/oauth")
 public class AuthController {
 }
