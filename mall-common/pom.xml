@@ -13,8 +13,4 @@
     <artifactId>mall-common</artifactId>
     <packaging>pom</packaging>
 
-    <modules>
-        <module>mybatis-plus-generator-ui</module>
-    </modules>
-
 </project>

@@ -1,4 +1,4 @@
-package com.mall.gateway;
+package com.mall.gateway.config;
 
 import lombok.Getter;
 import lombok.Setter;
