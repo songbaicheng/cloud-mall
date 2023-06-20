@@ -1,10 +1,10 @@
 # 优先级高于 application.yaml
 server:
-  port: 8110 # 应用服务 WEB 访问端口
+  port: 8090 # 应用服务 WEB 访问端口
 
 spring:
   application:
-    name: mall-monitor # 服务注册名称
+    name: mall-web # 服务注册名称
   cloud:
     nacos: # nacos配置
       config: # 配置管理设置
@@ -12,10 +12,10 @@ spring:
         username: nacos # 账号
         password: nacos # 密码
         namespace: 49dad146-ac3b-4fbb-aa44-17dff87d40bd # 命名空间ID
-        group: MALL_MONITOR_GROUP
+        group: MALL_WEB_GROUP # 分组名称
         file-extension: yaml # 配置文件格式
-        prefix: mall-monitor # 配置文件前缀
+        prefix: mall-web # 配置文件前缀
       discovery: # 服务管管理设置
-        server-addr:
+        server-addr: localhost:8848 # 服务注册地址 ,localhost:8850,localhost:8852
         namespace: 49dad146-ac3b-4fbb-aa44-17dff87d40bd # 命名空间ID
         group: CLOUD_MALL_GROUP # 分组名称

@@ -1,7 +1,7 @@
-package com.mall.admin.mapper;
+package com.mall.web.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import com.mall.admin.entity.Admin;
+import com.mall.web.entity.Admin;
 import org.apache.ibatis.annotations.Mapper;
 
 /**

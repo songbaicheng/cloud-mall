@@ -14,11 +14,11 @@
     <packaging>pom</packaging>
 
     <modules>
-        <module>../mall-admin</module>
+        <module>../mall-web</module>
         <module>../mall-gateway</module>
         <module>../mall-common</module>
         <module>../mall-auth</module>
-        <module>../mall-monitor</module>
+        <module>../mall-admin</module>
         <module>../mall-mpg</module>
     </modules>
 

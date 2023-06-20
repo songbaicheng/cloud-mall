@@ -1,7 +1,7 @@
-package com.mall.admin.service;
+package com.mall.web.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
-import com.mall.admin.entity.Admin;
+import com.mall.web.entity.Admin;
 
 /**
  * @author songbaicheng

@@ -1,0 +1,29 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/mall-web # 数据库
+    driver-class-name: com.mysql.cj.jdbc.Driver # mysql驱动
+    username: root # 账户
+    password: songbaicheng # 密码
+  boot:
+    admin:
+      client:
+        url: http://localhost:8110/ # spring boot admin server 地址
+
+mybatis-plus:
+  mapper-locations: classpath:mapper/*.xml # mapper映射文件位置
+  type-aliases-package: com/mall/web/entity # 实体类包路径
+  configuration:
+    map-underscore-to-camel-case: true # 驼峰转下划线
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl # 控制台打印sql
+  global-config:
+    banner: false # 关闭mybatis-plus启动logo
+    db-config:
+      logic-delete-field: deleted # 逻辑删除字段
+      logic-delete-value: 1 # 删除状态
+      logic-not-delete-value: 0 # 未删除状态
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*' # 暴露给监控全部接口

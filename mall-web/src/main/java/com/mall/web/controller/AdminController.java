@@ -1,7 +1,7 @@
-package com.mall.admin.controller;
+package com.mall.web.controller;
 
-import com.mall.admin.entity.Admin;
-import com.mall.admin.service.IAdminService;
+import com.mall.web.entity.Admin;
+import com.mall.web.service.IAdminService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
