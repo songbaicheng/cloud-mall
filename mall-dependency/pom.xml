@@ -161,8 +161,8 @@
                     <artifactId>maven-compiler-plugin</artifactId>
                     <version>${maven-compiler.verison}</version>
                     <configuration>
-                        <source>17</source>
-                        <target>17</target>
+                        <source>${java.version}</source>
+                        <target>${java.version}</target>
                         <encoding>UTF-8</encoding>
                     </configuration>
                 </plugin>
