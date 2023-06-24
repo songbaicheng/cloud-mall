@@ -38,6 +38,7 @@
         <spring-security-jwt.version>1.1.1.RELEASE</spring-security-jwt.version>
         <lettuce-core.version>6.2.2.RELEASE</lettuce-core.version>
         <jackson-databind.version>2.14.1</jackson-databind.version>
+        <jjwt.version>0.9.1</jjwt.version>
     </properties>
 
     <dependencies>
@@ -143,9 +144,9 @@
                 <version>${spring-security-jwt.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.nimbusds</groupId>
-                <artifactId>nimbus-jose-jwt</artifactId>
-                <version>9.30.2</version>
+                <groupId>io.jsonwebtoken</groupId>
+                <artifactId>jjwt</artifactId>
+                <version>${jjwt.version}</version>
             </dependency>
 
             <!-- Redis 相关依赖 -->
