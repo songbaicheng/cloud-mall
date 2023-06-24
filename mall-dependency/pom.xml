@@ -36,18 +36,28 @@
         <spring-cloud-starter-oauth2.version>2.2.5.RELEASE</spring-cloud-starter-oauth2.version>
         <spring-cloud-starter-security.version>2.2.5.RELEASE</spring-cloud-starter-security.version>
         <spring-security-jwt.version>1.1.1.RELEASE</spring-security-jwt.version>
+        <lettuce-core.version>6.2.2.RELEASE</lettuce-core.version>
+        <jackson-databind.version>2.14.1</jackson-databind.version>
     </properties>
 
     <dependencies>
+        <!-- 简化开发 -->
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
+        </dependency>
+
+        <!-- 测试类依赖 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
         </dependency>
     </dependencies>
 
     <dependencyManagement>
         <dependencies>
-            <!-- spring依赖 -->
+            <!-- spring 依赖 -->
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-dependencies</artifactId>
@@ -70,24 +80,11 @@
                 <scope>import</scope>
             </dependency>
 
-            <!-- 确认从2021.0.5版本起，Spring Cloud将不再默认启用bootstrap包，需自行引入 -->
+            <!-- 确认从2021.0.5版本起，Spring Cloud 将不再默认启用bootstrap包，需自行引入 -->
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-starter-bootstrap</artifactId>
                 <version>${spring-cloud-bootstrap.version}</version>
-            </dependency>
-
-            <!-- 测试类依赖 -->
-            <dependency>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-starter-test</artifactId>
-                <scope>test</scope>
-                <exclusions>
-                    <exclusion>
-                        <groupId>org.junit.vintage</groupId>
-                        <artifactId>junit-vintage-engine</artifactId>
-                    </exclusion>
-                </exclusions>
             </dependency>
 
             <!-- mybatis依赖 -->
@@ -104,7 +101,7 @@
                 <version>${mysql.version}</version>
             </dependency>
 
-            <!-- mybatis-plus代码生成器 -->
+            <!-- mybatis-plus 代码生成器 -->
             <dependency>
                 <groupId>com.github.davidfantasy</groupId>
                 <artifactId>mybatis-plus-generator-ui</artifactId>
@@ -149,6 +146,19 @@
                 <groupId>com.nimbusds</groupId>
                 <artifactId>nimbus-jose-jwt</artifactId>
                 <version>9.30.2</version>
+            </dependency>
+
+            <!-- Redis 相关依赖 -->
+            <dependency>
+                <groupId>io.lettuce</groupId>
+                <artifactId>lettuce-core</artifactId>
+                <version>${lettuce-core.version}</version>
+            </dependency>
+            <!-- Jackson 数据绑定库，提供了对象的序列化和反序列化功能 -->
+            <dependency>
+                <groupId>com.fasterxml.jackson.core</groupId>
+                <artifactId>jackson-databind</artifactId>
+                <version>${jackson-databind.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
