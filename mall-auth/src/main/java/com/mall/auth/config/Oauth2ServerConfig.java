@@ -7,6 +7,7 @@ import org.springframework.core.io.ClassPathResource;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.oauth2.config.annotation.configurers.ClientDetailsServiceConfigurer;
 import org.springframework.security.oauth2.config.annotation.web.configuration.AuthorizationServerConfigurerAdapter;
+import org.springframework.security.oauth2.config.annotation.web.configuration.EnableAuthorizationServer;
 import org.springframework.security.oauth2.config.annotation.web.configurers.AuthorizationServerEndpointsConfigurer;
 import org.springframework.security.oauth2.config.annotation.web.configurers.AuthorizationServerSecurityConfigurer;
 import org.springframework.security.rsa.crypto.KeyStoreKeyFactory;
@@ -20,7 +21,7 @@ import java.security.KeyPair;
  */
 @RequiredArgsConstructor
 @Configuration
-//@EnableAuthorizationServer
+@EnableAuthorizationServer
 public class Oauth2ServerConfig extends AuthorizationServerConfigurerAdapter {
 
     private final PasswordEncoder passwordEncoder;
@@ -73,6 +74,6 @@ public class Oauth2ServerConfig extends AuthorizationServerConfigurerAdapter {
     public KeyPair keyPair() {
         //从classpath下的证书中获取秘钥对
         KeyStoreKeyFactory keyStoreKeyFactory = new KeyStoreKeyFactory(new ClassPathResource("jwt.jks"), "songbaicheng".toCharArray());
-        return keyStoreKeyFactory.getKeyPair("jwt", "宋柏成".toCharArray());
+        return keyStoreKeyFactory.getKeyPair("jwt", "songbaicheng".toCharArray());
     }
 }
