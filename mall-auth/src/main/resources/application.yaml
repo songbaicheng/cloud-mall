@@ -4,6 +4,23 @@ spring:
     admin:
       client:
         url: http://localhost:8110/ # spring boot admin server 地址
+  security:
+    oauth2:
+      client:
+        registration:
+          mall-web:
+            client-id: mall-web
+            client-secret: 12345
+            authorization-grant-type: authorization_code
+            redirect-uri: https://www.baidu.com
+            provider:
+            scope: read, write
+
+logging:
+  level:
+    com.mall.auth: info
+  file:
+    name: /Users/songbaicheng/logs/cloud-mall/mall-auth/mall-auth.log
 
 management:
   endpoints:

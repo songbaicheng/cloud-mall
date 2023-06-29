@@ -33,12 +33,9 @@
         <mysql.version>8.0.28</mysql.version>
         <mybatis-plus-generator-ui.version>2.0.5</mybatis-plus-generator-ui.version>
         <spring-boot-admin.version>3.0.2</spring-boot-admin.version>
-        <spring-cloud-starter-oauth2.version>2.2.5.RELEASE</spring-cloud-starter-oauth2.version>
-        <spring-cloud-starter-security.version>2.2.5.RELEASE</spring-cloud-starter-security.version>
-        <spring-security-jwt.version>1.1.1.RELEASE</spring-security-jwt.version>
         <lettuce-core.version>6.2.2.RELEASE</lettuce-core.version>
         <jackson-databind.version>2.14.1</jackson-databind.version>
-        <jjwt.version>0.9.1</jjwt.version>
+        <oauth2-authorization-server>1.0.1</oauth2-authorization-server>
     </properties>
 
     <dependencies>
@@ -133,6 +130,13 @@
                 <groupId>com.fasterxml.jackson.core</groupId>
                 <artifactId>jackson-databind</artifactId>
                 <version>${jackson-databind.version}</version>
+            </dependency>
+
+            <!-- oauth2认证依赖 -->
+            <dependency>
+                <groupId>org.springframework.security</groupId>
+                <artifactId>spring-security-oauth2-authorization-server</artifactId>
+                <version>${oauth2-authorization-server}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
