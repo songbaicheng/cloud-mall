@@ -6,15 +6,20 @@ spring:
         url: http://localhost:8110/ # spring boot admin server 地址
   security:
     oauth2:
-      client:
+      clients:
+        use-current-uri: true
         registration:
           mall-web:
             client-id: mall-web
-            client-secret: 12345
-            authorization-grant-type: authorization_code
-            redirect-uri: https://www.baidu.com
-            provider:
-            scope: read, write
+            client-secret: '{bcrypt}$2a$10$g09oT29NxLtpF3zb70o3v.gFS/cNCFCe4wiYe5E2JsP.2l4gquHXa'
+            authorization-grant-type: client_credentials,urn:ietf:params:oauth:grant-type:jwt-bearer
+            scope: all
+            redirect-uri: https://www.baidu.com/index.htm
+            allowFormAuthenticationForClients: true
+#        provider:
+#          mall-web:
+#            authorization-uri: https://dev-1234.oktapreview.com/oauth2/v1/authorize
+#            token-uri: https://dev-1234.oktapreview.com/oauth2/v1/token
 
 logging:
   level:
