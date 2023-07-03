@@ -4,15 +4,9 @@ spring:
     admin:
       client:
         url: http://localhost:8110/ # spring boot admin server 地址
-  datasource:
-    url: jdbc:mysql://localhost:3306/mall-auth # 数据库
-    driver-class-name: com.mysql.cj.jdbc.Driver # mysql驱动
-    username: root # 账户
-    password: songbaicheng # 密码
   security:
     oauth2:
       clients:
-        use-current-uri: true
         registration:
           mall-web:
             client-id: mall-web

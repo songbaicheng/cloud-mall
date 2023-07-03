@@ -16,7 +16,7 @@
     <dependencies>
         <dependency>
             <groupId>com.mall</groupId>
-            <artifactId>mall-common</artifactId>
+            <artifactId>general-elements</artifactId>
             <version>1.0.0</version>
         </dependency>
         <dependency>
