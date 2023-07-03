@@ -1,7 +1,7 @@
 package com.mall.gateway.filter;
 
 import com.mall.gateway.config.IgnoreUrlsConfig;
-import content.AuthConstantEnum;
+import com.mall.content.AuthConstantEnum;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.server.reactive.ServerHttpRequest;
 import org.springframework.stereotype.Component;

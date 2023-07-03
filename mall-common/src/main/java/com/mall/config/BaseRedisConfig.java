@@ -1,4 +1,4 @@
-package config;
+package com.mall.config;
 
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import com.fasterxml.jackson.annotation.PropertyAccessor;
@@ -11,8 +11,8 @@ import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.serializer.Jackson2JsonRedisSerializer;
 import org.springframework.data.redis.serializer.RedisSerializer;
 import org.springframework.data.redis.serializer.StringRedisSerializer;
-import service.IRedisService;
-import service.impl.IRedisServiceImpl;
+import com.mall.service.IRedisService;
+import com.mall.service.impl.IRedisServiceImpl;
 
 /**
  * @ClassName RedisConfig

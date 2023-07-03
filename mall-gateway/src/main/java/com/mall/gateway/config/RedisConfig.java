@@ -1,6 +1,6 @@
 package com.mall.gateway.config;
 
-import config.BaseRedisConfig;
+import com.mall.config.BaseRedisConfig;
 import org.springframework.context.annotation.Configuration;
 
 /**

@@ -1,8 +1,8 @@
 package com.mall.web.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import com.mall.web.entity.Admin;
 import org.apache.ibatis.annotations.Mapper;
+import com.mall.entity.Admin;
 
 /**
  * @author songbaicheng

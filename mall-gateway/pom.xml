@@ -12,6 +12,7 @@
 
     <artifactId>mall-gateway</artifactId>
     <version>1.0.0</version>
+    <packaging>jar</packaging>
 
     <name>mall-gateway</name>
     <description>商城网关服务</description>

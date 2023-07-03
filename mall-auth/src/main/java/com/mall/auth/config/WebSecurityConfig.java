@@ -49,7 +49,7 @@ public class WebSecurityConfig {
         http.formLogin(AbstractAuthenticationFilterConfigurer::permitAll)
                 .csrf(AbstractHttpConfigurer::disable)
                 .authorizeHttpRequests((authorize) -> authorize
-                        .requestMatchers("/oauth/hello").permitAll()
+                        .requestMatchers("/oauth/hello", "/oauth/token").permitAll()
                         .anyRequest().authenticated());
 
         return http.build();

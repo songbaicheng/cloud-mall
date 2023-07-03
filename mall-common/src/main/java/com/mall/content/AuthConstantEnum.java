@@ -1,4 +1,4 @@
-package content;
+package com.mall.content;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

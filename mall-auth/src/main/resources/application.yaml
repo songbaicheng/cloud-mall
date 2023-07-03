@@ -4,6 +4,11 @@ spring:
     admin:
       client:
         url: http://localhost:8110/ # spring boot admin server 地址
+  datasource:
+    url: jdbc:mysql://localhost:3306/mall-auth # 数据库
+    driver-class-name: com.mysql.cj.jdbc.Driver # mysql驱动
+    username: root # 账户
+    password: songbaicheng # 密码
   security:
     oauth2:
       clients:
@@ -32,3 +37,7 @@ management:
     web:
       exposure:
         include: '*' # 暴露给监控全部接口
+
+jwt:
+  secret: 650e387e-d8ba-43cd-9237-a9274a675f7b # 与HMAC-SHA算法一起使用的密钥必须具有>=256位的大小
+  expiration: 3600 # 设

@@ -1,6 +1,6 @@
 package com.mall.web.controller;
 
-import com.mall.web.entity.Admin;
+import com.mall.entity.Admin;
 import com.mall.web.service.IAdminService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
@@ -35,7 +35,7 @@ public class AdminController {
             return new ResponseEntity<>(HttpStatus.NO_CONTENT);
         }
 
-        return new ResponseEntity<>(iAdminService.getById(id), HttpStatus.OK);
+        return new ResponseEntity(iAdminService.getById(id), HttpStatus.OK);
     }
 
 }

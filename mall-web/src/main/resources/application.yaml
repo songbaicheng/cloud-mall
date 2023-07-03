@@ -8,10 +8,22 @@ spring:
     admin:
       client:
         url: http://localhost:8110/ # spring boot admin server 地址
+  data:
+    redis:
+      host: 127.0.0.1
+      port: 6379
+      database: 0
+      lettuce:
+        pool:
+          max-active: 8 # 最大活跃连接数
+          max-idle: 8 # 最大空闲连接数
+          min-idle: 0 # 最小空闲连接数
+          max-wait: -1 # 获取连接的最大等待时间（-1表示无限等待）
+        shutdown-timeout: 2000 # 连接池关闭时的超时时间（毫秒）
 
 mybatis-plus:
   mapper-locations: classpath:mapper/*.xml # mapper映射文件位置
-  type-aliases-package: com/mall/web/entity # 实体类包路径
+  type-aliases-package: com/mall/web/com.mall.entity # 实体类包路径
   configuration:
     map-underscore-to-camel-case: true # 驼峰转下划线
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl # 控制台打印sql

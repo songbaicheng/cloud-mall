@@ -1,7 +1,7 @@
 package com.mall.web.service.impl;
 
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import com.mall.web.entity.Admin;
+import com.mall.entity.Admin;
 import com.mall.web.mapper.IAdminMapper;
 import com.mall.web.service.IAdminService;
 import org.springframework.stereotype.Service;

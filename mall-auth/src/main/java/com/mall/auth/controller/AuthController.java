@@ -1,8 +1,13 @@
 package com.mall.auth.controller;
 
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import com.mall.auth.feign.IAdminService;
+import com.mall.auth.utils.JwtUtils;
+import com.mall.entity.Admin;
+import lombok.RequiredArgsConstructor;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.Objects;
 
 /**
  * @author songbaicheng
@@ -11,10 +16,24 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @RestController
 @RequestMapping("/oauth")
+@RequiredArgsConstructor
 public class AuthController {
+
+    private final JwtUtils jwtUtils;
+    private final IAdminService adminService;
 
     @GetMapping("/hello")
     public String hello() {
         return "hello";
+    }
+
+    @PostMapping("/token")
+    public ResponseEntity<String> getToken(@RequestBody String id) {
+
+        System.out.println(adminService.test());
+        ResponseEntity<Admin> admin = adminService.getById(id);
+        String token = jwtUtils.generateToken(Objects.requireNonNull(admin.getBody()).getUsername());
+
+        return ResponseEntity.ok(token);
     }
 }
