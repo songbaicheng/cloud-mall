@@ -7,8 +7,6 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.Objects;
-
 /**
  * @author songbaicheng
  * @description 认证请求接口
@@ -28,11 +26,11 @@ public class AuthController {
     }
 
     @PostMapping("/token")
-    public ResponseEntity<String> getToken(@RequestBody String id) {
+    public ResponseEntity<String> getToken(@RequestParam String id) {
 
         System.out.println(adminService.test());
-        ResponseEntity<Admin> admin = adminService.getById(id);
-        String token = jwtUtils.generateToken(Objects.requireNonNull(admin.getBody()).getUsername());
+        Admin admin = adminService.getById(id);
+        String token = jwtUtils.generateToken(admin.getUsername());
 
         return ResponseEntity.ok(token);
     }

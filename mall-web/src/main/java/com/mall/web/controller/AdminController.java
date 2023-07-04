@@ -4,13 +4,7 @@ import com.mall.entity.Admin;
 import com.mall.web.service.IAdminService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
-import org.springframework.util.ObjectUtils;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * @author songbaicheng
@@ -31,14 +25,9 @@ public class AdminController {
         return "test";
     }
 
-    @GetMapping(value = "/{id}")
-    public ResponseEntity<Admin> getById(@PathVariable("id") String id) {
-
-        if (ObjectUtils.isEmpty(id)) {
-            return new ResponseEntity<>(HttpStatus.NO_CONTENT);
-        }
-
-        return new ResponseEntity(iAdminService.getById(id), HttpStatus.OK);
+    @PostMapping(value = "/{id}")
+    public Admin getById(@PathVariable("id") String id) {
+        return iAdminService.getById(id);
     }
 
 }
