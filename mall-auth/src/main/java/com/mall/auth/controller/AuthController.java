@@ -28,7 +28,6 @@ public class AuthController {
     @PostMapping("/token")
     public ResponseEntity<String> getToken(@RequestParam String id) {
 
-        System.out.println(adminService.test());
         Admin admin = adminService.getById(id);
         String token = jwtUtils.generateToken(admin.getUsername());
 
