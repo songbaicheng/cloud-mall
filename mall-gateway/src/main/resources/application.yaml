@@ -1,4 +1,4 @@
-# 配置到Nacos配置中心区
+# Spring 配置
 spring:
   boot:
     admin:
@@ -11,10 +11,14 @@ spring:
           enabled: true # # 启用服务发现，开启动态路由
           lower-case-service-id: true # 开启服务名称小写
       routes:
-        - id: mall-admin # mall-admin模块路由
-          uri: lb://mall-admin # 占位符
+        - id: mall-web # mall-web 模块路由
+          uri: lb://mall-web # 占位符
           predicates: # 断言
-            - Path=/mall-admin/**
+            - Path=/mall-web/**
+        - id: mall-auth # # mall-web 模块路由
+          uri: lb://mall-auth # 占位符
+          predicates: # 断言
+            - Path=/mall-auth/**
   data:
     redis:
       host: 127.0.0.1
@@ -28,12 +32,14 @@ spring:
           max-wait: -1 # 获取连接的最大等待时间（-1表示无限等待）
         shutdown-timeout: 2000 # 连接池关闭时的超时时间（毫秒）
 
+# Spring boot admin 配置
 management:
   endpoints:
     web:
       exposure:
         include: '*' # 暴露给监控全部接口
 
+# 自定义白名单配置
 secure:
   ignore:
     urls: #配置白名单路径
